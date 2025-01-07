@@ -11,40 +11,59 @@ namespace Day1
     {
         static void Main(string[] args)
         {
-            
+
+            //Console.OutputEncoding = Encoding.UTF8;
+            //Console.WriteLine("Nhập Nội Dung:");
+            //string content = Console.ReadLine();
+            //Console.WriteLine("Nội dung vừa nhập là: \n" + content);
+
+            //Console.WriteLine("Các biến:");
+
+            //int number = 12345;
+            //Console.WriteLine("number:" ,number);
+            //float numberOther = 12.1F;
+            //Console.WriteLine(numberOther);
+            //bool trueFalse = true;
+            //Console.WriteLine(trueFalse);
+            //string textString = "61566562755419|eaQ2pSkv83fOf|NVWKX6RE25EFPHTIBM4VGJPSUUP5O3PR";
+            //Console.WriteLine(textString);
+            //string textStringSecond = "61566562755419";
+            //char c = '\u002B';
+            //Console.WriteLine(c);
+
+            //// convert To String
+            //string convertToString = number.ToString();
+            //Console.WriteLine("Convert về string:" + convertToString);
+
+            //// convert To Number
+            //float convertToFloat = float.Parse(textStringSecond);
+            //Console.WriteLine("Convert về FloatNumber:" + convertToFloat);
+
+            //// Cộng chuỗi
+            //string plusString = textString + textStringSecond;
+            //Console.WriteLine("Cộng chuỗi :" + plusString);
+
+
             Console.OutputEncoding = Encoding.UTF8;
-            Console.WriteLine("Nhập Nội Dung:");
+            Console.WriteLine("Nhập năm sinh của bạn:");
             string content = Console.ReadLine();
-            Console.WriteLine("Nội dung vừa nhập là: \n" + content);
-
-            Console.WriteLine("Các biến:");
-
-            int number = 12345;
-            Console.WriteLine("number:" ,number);
-            float numberOther = 12.1F;
-            Console.WriteLine(numberOther);
-            bool trueFalse = true;
-            Console.WriteLine(trueFalse);
-            string textString = "61566562755419|eaQ2pSkv83fOf|NVWKX6RE25EFPHTIBM4VGJPSUUP5O3PR";
-            Console.WriteLine(textString);
-            string textStringSecond = "61566562755419";
-            char c = '\u002B';
-            Console.WriteLine(c);
-
-            // convert To String
-            string convertToString = number.ToString();
-            Console.WriteLine("Convert về string:" + convertToString);
-
-            // convert To Number
-            float convertToFloat = float.Parse(textStringSecond);
-            Console.WriteLine("Convert về FloatNumber:" + convertToFloat);
-
-            // Cộng chuỗi
-            string plusString = textString + textStringSecond;
-            Console.WriteLine("Cộng chuỗi :" + plusString);
+            int age = 2025 - int.Parse(content);
+            Console.WriteLine("năm nay bạn " + age + " tuổi");
+            if (age >= 20)
+            {
+                Console.WriteLine("Bạn đã đủ tuổi lấy vợ");
+            }
+            else
+            {
+                Console.WriteLine("Bạn vắt mũi còn chưa sạch, không vợ con được");
+            }
 
             // stop console
             Console.ReadKey();
+
+
+
+
 
 
         }
