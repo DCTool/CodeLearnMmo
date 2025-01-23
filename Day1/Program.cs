@@ -75,54 +75,21 @@ namespace Day1
         static void Main(string[] args)
         {
 
-
-
-        again:
             Console.OutputEncoding = Encoding.UTF8;
 
 
-            Console.WriteLine("Bài 1:");
-            Console.WriteLine("Nhập vào số bé");
-            string inputNumberSmall = Console.ReadLine();
-            int numberSmall = int.Parse(inputNumberSmall);
-            Console.WriteLine("Nhập vào số lớn");
-            string inputNumberTall = Console.ReadLine();
-            int numberTall = int.Parse(inputNumberTall);
-            if (numberSmall >= numberTall)
-            {
-                Console.WriteLine("Số bé không thể lớn hơn hoặc bằng số lớn !");
-                goto again;
-            }
-            int tong = 0;
-            Console.WriteLine("Các số từ số bé đến số lớn là:");
-            for (int i = numberSmall; i <= numberTall; i++)
-            {
-                Console.WriteLine(i);
-                tong += i;
-            }
-            Console.WriteLine("Tổng của các số là: " + tong);
+            string token = "(function(){window.__accessToken=\"EAABsbCS1iHgBOz5wvFk1UZAQFoG5lt6HoeuVaYHPXVGSHtUhpHF0KaipFfz6Ac6qT76C2KixyzkCukjx8Fk6fY4q9WJ3yOae8xKjrZAqjYaXRefDCVpmJgATELjSiv6iKqQbFWbVERLVKaguHdLfjBbwxn8ZAdRaYbNB4MVShfpnH27wb4c6WF57tuIXpRhT7lYYGGyuAZDZD\";";
+            string[] tokenSplit = token.Split(new string[] { "window.__accessToken=\"" }, StringSplitOptions.None);
+            Console.WriteLine(tokenSplit);
+            //for (int i = 0; i < tokenConvert.Length; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            Console.WriteLine("String:" + tokenSplit[0]);
+            Console.WriteLine("String:" + tokenSplit[1]);
 
-
-            Console.WriteLine("Bài 2:");
-
-            Console.WriteLine("Nhập vào số lượng phần tử bạn muốn có trong mảng:");
-            string inputQuantity = Console.ReadLine();
-            int quantity = int.Parse(inputQuantity);
-
-            int[] obj = new int[quantity];
-            int tongObj = 0;
-            for (int i = 1; i <= quantity; i++)
-            {
-                Console.WriteLine("Nhập vào giá trị phần tử thứ: " + i);
-                string inputIndex = Console.ReadLine();
-                int indexObj = int.Parse(inputIndex);
-                tongObj += indexObj;
-
-
-            }
-            Console.WriteLine("Tổng của các phần tử là:" + tongObj);
-
-
+            string[] tokenConvert = tokenSplit[1].Split('"');
+            Console.WriteLine("Token via:" + tokenConvert[0]);    
 
             Console.ReadKey();
 
